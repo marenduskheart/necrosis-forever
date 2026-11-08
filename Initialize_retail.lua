@@ -267,27 +267,27 @@ local function CreateArtwork()
 	artFrame.Center = textureContainer:CreateTexture('NUI_Art_Classic_Center', 'BACKGROUND')
 	artFrame.Center:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-center.png')
 	artFrame.Center:SetPoint('BOTTOM', artFrame, 'BOTTOM')
-	artFrame.Center:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
+	artFrame.Center:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 
 	artFrame.Left = textureContainer:CreateTexture('NUI_Art_Classic_Left', 'BACKGROUND')
 	artFrame.Left:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-left1.png')
 	artFrame.Left:SetPoint('BOTTOMRIGHT', artFrame.Center, 'BOTTOMLEFT', 0, 0)
-	artFrame.Left:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
+	artFrame.Left:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 	artFrame.FarLeft = textureContainer:CreateTexture('NUI_Art_Classic_FarLeft', 'BACKGROUND')
 	artFrame.FarLeft:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-left2.png')
 	artFrame.FarLeft:SetPoint('BOTTOMRIGHT', artFrame.Left, 'BOTTOMLEFT', 0, 0)
 	artFrame.FarLeft:SetPoint('BOTTOMLEFT', artFrame, 'BOTTOMLEFT', 0, 0)
-	artFrame.FarLeft:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
+	artFrame.FarLeft:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 
 	artFrame.Right = textureContainer:CreateTexture('NUI_Art_Classic_Right', 'BACKGROUND')
 	artFrame.Right:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-right1.png')
 	artFrame.Right:SetPoint('BOTTOMLEFT', artFrame.Center, 'BOTTOMRIGHT')
-	artFrame.Right:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
+	artFrame.Right:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 	artFrame.FarRight = textureContainer:CreateTexture('NUI_Art_Classic_FarRight', 'BACKGROUND')
 	artFrame.FarRight:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-right2.png')
 	artFrame.FarRight:SetPoint('BOTTOMLEFT', artFrame.Right, 'BOTTOMRIGHT')
 	artFrame.FarRight:SetPoint('BOTTOMRIGHT', artFrame, 'BOTTOMRIGHT')
-	artFrame.FarRight:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
+	artFrame.FarRight:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 
 	--print("[NecrosisUI] CreateArtwork() completed successfully!")
 	--print("[NecrosisUI] artFrame visible:", artFrame:IsVisible())

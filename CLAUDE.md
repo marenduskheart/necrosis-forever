@@ -42,8 +42,8 @@ shared build must stay GPL with source included.
 - Loaded in two places, both with explicit `.png`: `UI/BottomBanner/Style.lua`
   and `Initialize_retail.lua` (CreateArtwork). Initialize.lua has an old copy
   pointing at a non-existent `NecrosisUI/Themes/Classic` path.
-- Tint: `SetVertexColor(0.7, 0.3, 1.0)` on all five pieces in both files. The art
-  is already purple; use `1, 1, 1` to show the art as drawn.
+- Tint: `SetVertexColor(1, 1, 1)` (no tint) on all five pieces in both files; was
+  `0.7, 0.3, 1.0` (purple). The art carries its own colors.
 - Editing rules: keep exact power-of-two sizes and the alpha channel; piece
   edges must line up. WoW needs a full client restart for new texture files.
 
