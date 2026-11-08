@@ -222,7 +222,8 @@ do
 		if NecrosisConfig.SnapSphereToBanner == false then return end
 		local sphere = _G.NecrosisMainSphere
 		local container = _G.NUI_TextureContainer
-		if not (sphere and container) or sphere == _G.NecrosisMainSphere_Placeholder then return end
+		-- Also applies to the loading placeholder, so the sphere is in place from the start
+		if not (sphere and container) then return end
 		if InCombatLockdown() then
 			-- The sphere is a secure button: it can't be moved in combat.
 			snapRetry:RegisterEvent("PLAYER_REGEN_ENABLED")
@@ -1153,6 +1154,8 @@ function Necrosis:Initialize(Config)
 			if not InCombatLockdown() then
 				-- DESTROY old button completely (including placeholder)
 			local oldBtn = _G["NecrosisButton"]
+			-- Remember what the loading sphere shows, so the swap is invisible
+			local oldTexture = oldBtn and oldBtn:GetNormalTexture() and oldBtn:GetNormalTexture():GetTexture()
 			if oldBtn then
 				oldBtn:Hide()
 				oldBtn:SetParent(nil)
@@ -1170,7 +1173,7 @@ function Necrosis:Initialize(Config)
 				local btn = CreateFrame("Button", "NecrosisMainSphere", UIParent, "SecureUnitButtonTemplate")
 				-- Apply saved skin color, or default to 666
 				local skinColor = NecrosisConfig.NecrosisColor or "666"
-				btn:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..skinColor.."\\Shard16")
+				btn:SetNormalTexture(oldTexture or ("Interface\\AddOns\\NecrosisForever\\UI\\"..skinColor.."\\Shard16"))
 				btn:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight")
 				btn:GetHighlightTexture():SetBlendMode("ADD")
 				btn:SetWidth(58)

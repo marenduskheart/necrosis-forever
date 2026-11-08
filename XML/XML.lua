@@ -129,19 +129,31 @@ function Necrosis:CreateWarlockUI()
 		return
 	end
 
-	-- Configure it
-	frame:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\Shard")
+	-- Configure it. This placeholder is shown during loading and replaced by the
+	-- final sphere after 5 s (Initialize.lua), so give it the same skin, size
+	-- and position as the final one: then the swap is invisible.
+	local skinColor = NecrosisConfig.NecrosisColor or "666"
+	frame:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..skinColor.."\\Shard16")
 	frame:SetWidth(58)
 	frame:SetHeight(58)
 	frame:SetMovable(true)
 	frame:EnableMouse(true)
+	frame:SetFrameStrata("MEDIUM")
 	frame:SetFrameLevel(1)
 
 	-- Place the button window at its saved location || Placement de la fenêtre à l'endroit sauvegardé ou à l'emplacement par défaut
+	-- Same lookup as the final sphere: NecrosisMainSphere first, then the legacy NecrosisButton
 	frame:ClearAllPoints()
-	local pos = GetFramePosition("NecrosisButton", {"CENTER", "UIParent", "CENTER", 0, -200})
+	local pos = GetFramePosition("NecrosisMainSphere", nil)
+	if not (NecrosisConfig.FramePosition and NecrosisConfig.FramePosition["NecrosisMainSphere"]) then
+		pos = GetFramePosition("NecrosisButton", {"BOTTOM", "UIParent", "BOTTOM", 0, 59.01052474975586, 1.429999947547913})
+	end
 	frame:SetPoint(pos[1], pos[2], pos[3], pos[4], pos[5])
 	if pos[6] then frame:SetScale(pos[6]) else frame:SetScale((NecrosisConfig.NecrosisButtonScale or 100) / 100) end
+	-- Center it in the banner socket, like the final sphere
+	if NUI and NUI.SnapSphereToBanner then
+		NUI:SnapSphereToBanner()
+	end
 	frame:Show()
 
 	-- Create the soulshard counter || Création du compteur de fragments d'âme
