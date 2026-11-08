@@ -114,12 +114,13 @@ shared build must stay GPL with source included.
   (`c127740`, "give Spells files time to load", which is not how WoW loads
   files). Neither value was measured. "Bug #10" is upstream's private
   numbering, not GitHub issue #10.
-- So the rebuild is an unexplained workaround. Experiment (2026-11-08): the
-  5 s delay is removed; `CreateMainSphere()` runs at the end of
+- So the rebuild was an unexplained workaround. Since 2026-11-08 the 5 s
+  delay is gone: `CreateMainSphere()` runs at the end of
   `Necrosis:Initialize` (still swapping the placeholder for a fresh button).
-  Verify in game: left, shift+left, right and middle click and dragging the
-  sphere, right after a fresh login and after /reload. If clicks fail, the
-  delay mattered after all: restore it with `C_Timer.After(5, CreateMainSphere)`.
+  Tested in game the same day: left, shift+left, right and middle click,
+  tooltip and drag all work after a fresh login and after /reload. If clicks
+  ever break, restoring `C_Timer.After(5, CreateMainSphere)` is the first
+  thing to try. Removing the placeholder entirely has not been tried.
 
 ## Notes
 
