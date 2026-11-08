@@ -1,10 +1,12 @@
 # Necrosis Forever
 
 Personal fork of the Necrosis warlock addon for the WoW `_forever_` client.
-Only WoW Forever is supported: it loads `NecrosisForever_Camelot.toc`. Other
-flavours' `.toc` files and `*_retail`/Classic variants are upstream leftovers;
-don't spend effort keeping them working. Many files named `*_retail.lua` ARE
-loaded on Forever, so check the Camelot toc before assuming a file is unused.
+Only WoW Forever is supported. There is one toc, `NecrosisForever.toc`; every
+Lua/XML file outside `libs/` is loaded by it (directly or through an `.xml`).
+Other flavours' tocs and code, and upstream's AI session notes, were removed
+in "chore: remove files not loaded by WoW Forever"; flavour suffixes
+(`_retail`, `-Forever`) were dropped from file names in the commit after it.
+Images and sounds were kept as is: code builds their paths by name.
 License: GPL v2 or later (`_Copyright.txt`, `_GPL_V2.txt`). Keep both files; a
 shared build must stay GPL with source included.
 
@@ -21,16 +23,24 @@ shared build must stay GPL with source included.
   (or `git cherry-pick <sha>` for single fixes).
 - Expect conflicts on lines with texture paths: resolve by keeping upstream's
   change but with `NecrosisForever` in the path.
+- Upstream's Forever code lives in their `*_retail.lua` / `*-Forever.lua`
+  files. Map them to ours: Initialize_retail -> Initialize, Dialog_retail ->
+  Dialog, Dialog_Forever -> DemonList, Spells-Forever -> Spells,
+  Necrosis-Forever -> Necrosis, Timers/Functions_retail -> Timers/Functions,
+  XML/{Attributes,Options-Sphere,Options-Buttons,Options-Misc,Panel}-Forever
+  and XML/{Options-Menus,Options-Timers,XML}_retail -> same name without the
+  suffix, UI/BottomBanner/Framework_retail -> UI/BottomBanner/EditModeLayout,
+  NecrosisForever_Camelot.toc -> NecrosisForever.toc. Changes to their other
+  flavours' files can be ignored.
 
 ## What the fork changed (commit "feat: fork Necrosis as Necrosis Forever")
 
-- Folder and all `.toc` files renamed `Necrosis*` -> `NecrosisForever*`; title
-  "Necrosis Forever". The `_forever_` client loads `NecrosisForever_Camelot.toc`
-  (Interface 16001, X-Min-Interface-Forever 160001).
+- Folder and toc renamed `Necrosis*` -> `NecrosisForever*`; title
+  "Necrosis Forever" (Interface 16001, X-Min-Interface-Forever 160001).
 - All `Interface\AddOns\Necrosis\` paths (about 850) point at `NecrosisForever`.
 - Folder-name lookups use `NecrosisForever`: `NECROSIS_ID` (Constants.lua, also
-  the AceLocale app name), `AppName` and `GetMetadata` in Initialize.lua /
-  Initialize_retail.lua, `ADDON_NAME` in VersionCheck.lua.
+  the AceLocale app name), `AppName` and `GetMetadata` in Initialize.lua,
+  `ADDON_NAME` in VersionCheck.lua.
 - Kept on purpose: the global `Necrosis` table, frame names (`NUI_*`,
   `NecrosisUI`...) and SavedVariables `NecrosisConfig`. So the original Necrosis
   addon must be disabled in game, and settings carry over from it.
@@ -52,14 +62,15 @@ shared build must stay GPL with source included.
   ends, faint alpha is cleaned up, and the strip is sliced into the pieces.
 - The `.blp` files and `base-left1.psd` are the old SpartanUI-derived art,
   unused; the old PNGs are in git history (before the redesign commit).
-- On Forever the banner is built by the code string inside
-  `Initialize_retail.lua` (CreateArtwork, run via loadstring 0.5 s after
-  load), full width on UIParent, sized by the Options "BottomBanner Size"
-  slider (`BottomBannerWidthScale`, `NUI:UpdateBottomBannerSize`).
-- `UI/BottomBanner/Style.lua` is no longer loaded (removed from Init.xml). It
-  drew a second banner whose outer pieces were anchored to the 800-wide
-  `NecrosisUI` frame, so they came out squashed. Initialize.lua (not loaded
-  on Forever) has another old copy.
+- The banner is built by the code string inside `Initialize.lua`
+  (CreateArtwork, run via loadstring 0.5 s after load), full width on
+  UIParent, sized by the Options "BottomBanner Size" slider
+  (`BottomBannerWidthScale`, `NUI:UpdateBottomBannerSize`).
+- `UI/BottomBanner/Framework.lua` loads after `EditModeLayout.lua` and
+  overrides its NUI:Show/Hide/ImportLayout..., and both create a frame named
+  `NecrosisUI` (800x200); the later one wins.
+- The old `UI/BottomBanner/Style.lua` (deleted) drew a second banner whose
+  outer pieces were anchored to that 800-wide frame, so they came out squashed.
 - The outer pieces have a fixed `SetSize(1024, 256)` and are anchored only to
   the middle pieces, so they run off the screen edge. (They used to be
   anchored to both screen edge and middle piece, which squashed 1024 px into
@@ -72,6 +83,6 @@ shared build must stay GPL with source included.
 
 ## Notes
 
-- The ~40 French `*.md` files in the root are leftover AI session notes from
-  upstream, not docs to trust.
-- Not yet tested in game after the fork.
+- Commits: Conventional Commits, GPG-signed.
+- In-file code for other flavours (e.g. `C_EditMode` or Retail-only API
+  branches) is still present; only whole unused files were removed.
