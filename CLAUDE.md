@@ -79,6 +79,15 @@ shared build must stay GPL with source included.
   anchored to both screen edge and middle piece, which squashed 1024 px into
   the ~150 px left over; a SetTexCoord crop attempt didn't take effect.) If
   more than 1024 px is ever left beside the middle, a gap appears.
+- The main sphere is centered in the banner socket by
+  `NUI:SnapSphereToBanner()` (Initialize.lua): on load, after the banner
+  size slider, a sphere SetScale, or a UI scale change; deferred to after
+  combat. `SOCKET_CENTER_FROM_BOTTOM` (114) is the socket center measured
+  from the bottom of base-center.png; update it if the center art changes.
+  The sphere stays anchored to `BOTTOM` of UIParent (only the y offset is
+  computed): anchoring the secure sphere to the banner texture made it vanish.
+  Dragging the sphere sets `NecrosisConfig.SnapSphereToBanner = false`
+  (re-enable: `/run NecrosisConfig.SnapSphereToBanner = nil ReloadUI()`).
 - Tint: `SetVertexColor(1, 1, 1)` (no tint) on all five pieces; was
   `0.7, 0.3, 1.0` (purple). The art carries its own colors.
 - Editing rules: keep exact power-of-two sizes and the alpha channel; piece

@@ -200,7 +200,47 @@ do
 		local scale = 0.78 * widthScale
 		textureContainer:SetScale(scale)
 		--print("[NecrosisUI] BottomBanner size updated - Width: " .. string.format("%.1f", widthScale) .. ", Height: " .. string.format("%.1f", heightScale))
+		NUI:SnapSphereToBanner()
 	end
+
+	-- Center the main sphere in the banner's socket. The socket's height
+	-- follows the banner size slider, so a fixed sphere position only lines
+	-- up at one banner size. Runs while the banner is on, unless the player
+	-- dragged the sphere somewhere else (SnapSphereToBanner = false).
+	local SOCKET_CENTER_FROM_BOTTOM = 114  -- px in base-center.png (256 high), socket center at y=142
+	local snapRetry = CreateFrame("Frame")
+	snapRetry:SetScript("OnEvent", function(self)
+		self:UnregisterEvent("PLAYER_REGEN_ENABLED")
+		NUI:SnapSphereToBanner()
+	end)
+
+	function NUI:SnapSphereToBanner()
+		if not NecrosisConfig or not NecrosisConfig.NecrosisUIEnabled then return end
+		if NecrosisConfig.SnapSphereToBanner == false then return end
+		local sphere = _G.NecrosisMainSphere
+		local container = _G.NUI_TextureContainer
+		if not (sphere and container) or sphere == _G.NecrosisMainSphere_Placeholder then return end
+		if InCombatLockdown() then
+			-- The sphere is a secure button: it can't be moved in combat.
+			snapRetry:RegisterEvent("PLAYER_REGEN_ENABLED")
+			return
+		end
+		local sphereScale = sphere:GetEffectiveScale()
+		local height = sphere:GetHeight()
+		if not sphereScale or sphereScale <= 0 or not height or height <= 0 then return end
+		-- The banner's bottom edge is the bottom of UIParent, so keep the sphere
+		-- anchored to UIParent like its saved position (a secure button must not
+		-- be anchored to the banner texture) and only compute the height.
+		-- SetPoint offsets are in the sphere's own (scaled) units.
+		local socketCenter = SOCKET_CENTER_FROM_BOTTOM * container:GetEffectiveScale() / sphereScale
+		sphere:ClearAllPoints()
+		sphere:SetPoint("BOTTOM", UIParent, "BOTTOM", 0, socketCenter - height / 2)
+	end
+
+	local snapWatcher = CreateFrame("Frame")
+	snapWatcher:RegisterEvent("UI_SCALE_CHANGED")
+	snapWatcher:RegisterEvent("DISPLAY_SIZE_CHANGED")
+	snapWatcher:SetScript("OnEvent", function() NUI:SnapSphereToBanner() end)
 
 	-- Create Classic theme module
 	local themeModule = NUI:NewModule('Style_Classic')
@@ -290,6 +330,10 @@ local function CreateArtwork()
 	artFrame.FarRight:SetSize(1024, 256)
 	artFrame.FarRight:SetPoint('BOTTOMLEFT', artFrame.Right, 'BOTTOMRIGHT')
 	artFrame.FarRight:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
+
+	-- Put the sphere in the socket (if it already exists; otherwise the
+	-- sphere setup does it once it is created)
+	NUI:SnapSphereToBanner()
 
 	--print("[NecrosisUI] CreateArtwork() completed successfully!")
 	--print("[NecrosisUI] artFrame visible:", artFrame:IsVisible())
@@ -1284,6 +1328,8 @@ function Necrosis:Initialize(Config)
 				btn:SetScript("OnDragStart", function(self) Necrosis:OnDragStart(self) end)
 				btn:SetScript("OnDragStop", function(self)
 					Necrosis:OnDragStop(self)
+					-- A hand-placed sphere stays where the player put it
+					NecrosisConfig.SnapSphereToBanner = false
 					-- Make text overlay cover the button again after drag
 					local overlay = _G["NecrosisShardCountFrame"]
 					if overlay then
@@ -1320,6 +1366,12 @@ function Necrosis:Initialize(Config)
 				btn:Show()
 				_G["NecrosisButton"] = btn
 				_G["NecrosisMainSphere"] = btn
+
+				-- Center the sphere in the banner socket now, and again whenever its size changes
+				if NUI and NUI.SnapSphereToBanner then
+					hooksecurefunc(btn, "SetScale", function() NUI:SnapSphereToBanner() end)
+					NUI:SnapSphereToBanner()
+				end
 
 				-- Set tooltip type for the main button
 				btn.tip = "Main"
