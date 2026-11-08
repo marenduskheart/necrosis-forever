@@ -36,10 +36,14 @@ shared build must stay GPL with source included.
 - Art: `UI/BottomBanner/Images/base-{left2,left1,center,right1,right2}.png`
   (1024x256, 512x256, 512x256, 512x256, 1024x256, RGBA). Current art is a
   ChatGPT-generated redesign (gold filigree, lotus, crescents) made from
-  `UI/BottomBanner/CHATGPT_PROMPT.md`; its source is `Images/base-source.png`
-  (2172x724). It was scaled by 0.865 so the content fits 256 px high (bar
-  top now at y=116, socket centered at x=1792), centered on the strip, with
-  the outer pieces filled by repeating the art's edge column, then sliced.
+  `UI/BottomBanner/CHATGPT_PROMPT.md`. Built from two 2172x724 sources:
+  - `Images/base-source-center.png`: the center design, scaled by 0.883 so it
+    fits 256 px high (bar top at y=114, socket centered at x=1792).
+  - `Images/base-source-repeat.png`: a plain bar that tiles seamlessly. It
+    was stretched in three bands so its gold lines match the center art,
+    then tiled outward from x=1792 (mirrored on the left).
+  The center art is blended onto the tiled bar with a 160 px fade at both
+  ends, faint alpha is cleaned up, and the strip is sliced into the pieces.
 - The `.blp` files and `base-left1.psd` are the old SpartanUI-derived art,
   unused; the old PNGs are in git history (before the redesign commit).
 - Loaded in two places, both with explicit `.png`: `UI/BottomBanner/Style.lua`
