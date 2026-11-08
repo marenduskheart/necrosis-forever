@@ -1150,9 +1150,11 @@ function Necrosis:Initialize(Config)
 		Necrosis:CurseSpellAttribute()
 		Necrosis:StoneAttribute(SteedAvailable)
 
-		-- CRITICAL: CREATE BRAND NEW BUTTON with delay (like test 5 that WORKS!)
-		-- Increased delay to 5 seconds to ensure proper initialization on first login
-		C_Timer.After(5, function()
+		-- Build the final sphere, replacing the loading placeholder.
+		-- Upstream ran this 5 s after login (see CLAUDE.md "Sphere startup"): a
+		-- trial-and-error workaround for a click bug whose cause was never found.
+		-- Experiment: run it right away instead.
+		local function CreateMainSphere()
 			if not InCombatLockdown() then
 				-- DESTROY old button completely (including placeholder)
 			local oldBtn = _G["NecrosisButton"]
@@ -1434,7 +1436,8 @@ function Necrosis:Initialize(Config)
 				-- Shard count will be automatically updated by Necrosis:OnUpdate()
 				-- No need to force update here - let the normal system handle it
 			end
-		end)
+		end
+		CreateMainSphere()
 	end
 
 	-- We check that the fragments are in the bag defined by the Warlock || On vérifie que les fragments sont dans le sac défini par le Démoniste

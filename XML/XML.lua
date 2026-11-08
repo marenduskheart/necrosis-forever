@@ -130,8 +130,8 @@ function Necrosis:CreateWarlockUI()
 	end
 
 	-- Configure it. This placeholder is shown during loading and replaced by the
-	-- final sphere after 5 s (Initialize.lua), so give it the same skin, size
-	-- and position as the final one: then the swap is invisible.
+	-- final sphere in Necrosis:Initialize (Initialize.lua), so give it the same
+	-- skin, size and position as the final one: then the swap is invisible.
 	local skinColor = NecrosisConfig.NecrosisColor or "666"
 	frame:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..skinColor.."\\Shard16")
 	frame:SetWidth(58)
