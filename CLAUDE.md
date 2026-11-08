@@ -82,8 +82,10 @@ shared build must stay GPL with source included.
 - The main sphere is centered in the banner socket by
   `NUI:SnapSphereToBanner()` (Initialize.lua): on load, after the banner
   size slider, a sphere SetScale, or a UI scale change; deferred to after
-  combat. `SOCKET_CENTER_FROM_BOTTOM` (114) is the socket center measured
-  from the bottom of base-center.png; update it if the center art changes.
+  combat. `SOCKET_CENTER_FROM_BOTTOM` (106) is where the sphere's center
+  goes, in px above the bottom of base-center.png: the socket's geometric
+  center (114) minus 8 px, which looked better in game. Update it if the
+  center art changes.
   The sphere stays anchored to `BOTTOM` of UIParent (only the y offset is
   computed): anchoring the secure sphere to the banner texture made it vanish.
   Dragging the sphere sets `NecrosisConfig.SnapSphereToBanner = false`

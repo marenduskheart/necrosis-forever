@@ -207,7 +207,10 @@ do
 	-- follows the banner size slider, so a fixed sphere position only lines
 	-- up at one banner size. Runs while the banner is on, unless the player
 	-- dragged the sphere somewhere else (SnapSphereToBanner = false).
-	local SOCKET_CENTER_FROM_BOTTOM = 114  -- px in base-center.png (256 high), socket center at y=142
+	-- px above the bottom of base-center.png (256 high). The socket's geometric
+	-- center is at 114 (y=142); the sphere sits 8 px lower, which looks more
+	-- centered with the buttons around it.
+	local SOCKET_CENTER_FROM_BOTTOM = 106
 	local snapRetry = CreateFrame("Frame")
 	snapRetry:SetScript("OnEvent", function(self)
 		self:UnregisterEvent("PLAYER_REGEN_ENABLED")
