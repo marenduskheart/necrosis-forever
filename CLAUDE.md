@@ -95,6 +95,28 @@ shared build must stay GPL with source included.
 - Editing rules: keep exact power-of-two sizes and the alpha channel; piece
   edges must line up. WoW needs a full client restart for new texture files.
 
+## Sphere startup (why it is rebuilt after 5 s)
+
+- At load a hidden placeholder `NecrosisMainSphere_Placeholder` (also
+  `_G.NecrosisButton`) is created; `XML/XML.lua` CreateWarlockUI shows it.
+  5 s later (`C_Timer.After(5, ...)` in `Necrosis:Initialize`) it is hidden
+  and a new `NecrosisMainSphere` button is created with all attributes.
+- Origin, from upstream history: `02fd5f7` (2026-02-07, lancetre, AI
+  co-authored) "Clics sphère principale ne fonctionnaient pas (Bug #10)":
+  hovering worked but clicks cast nothing. The commit blames a dotted name
+  from GetTime() and "multiple modifications corrupting the button state",
+  but the committed code before it used the plain name `NecrosisButton`, and
+  the second cause is unproven. The fix was found by trial and error
+  (`TestButton.lua`, test 5: a fresh button created 1 s later worked). The
+  same commit also switched the template from SecureActionButtonTemplate to
+  SecureUnitButtonTemplate, so it is unknown which change actually fixed it.
+- The delay went 1 s -> 3 s (`2ed6c41`, "first login visibility") -> 5 s
+  (`c127740`, "give Spells files time to load", which is not how WoW loads
+  files). Neither value was measured. "Bug #10" is upstream's private
+  numbering, not GitHub issue #10.
+- So the rebuild is an unexplained workaround. Removing it would need an
+  in-game test of left/shift/right clicks right after login and /reload.
+
 ## Notes
 
 - Commits: Conventional Commits, GPG-signed.

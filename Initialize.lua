@@ -733,10 +733,12 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
 			-- Set button texture after initialization (ensures visibility)
 			C_Timer.After(0.5, function()
 				local btn = _G["NecrosisMainSphere"] or _G["NecrosisButton"]
-				if btn then
-					-- Apply default texture if not already set
-					local texturePath = "Interface\\AddOns\\NecrosisForever\\UI\\666\\Shard0"
-					btn:SetNormalTexture(texturePath)
+				-- Only fill in a texture if the sphere has none yet (it normally
+				-- already shows the player's skin), and use the player's skin:
+				-- this used to force 666 on every login.
+				local current = btn and btn:GetNormalTexture()
+				if btn and not (current and current:GetTexture()) then
+					btn:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..(NecrosisConfig.NecrosisColor or "666").."\\Shard0")
 				end
 			end)
 
