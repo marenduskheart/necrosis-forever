@@ -275,8 +275,10 @@ local function CreateArtwork()
 	artFrame.Left:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 	artFrame.FarLeft = textureContainer:CreateTexture('NUI_Art_Classic_FarLeft', 'BACKGROUND')
 	artFrame.FarLeft:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-left2.png')
+	-- Outer pieces keep their natural size and run off the screen edge, so they
+	-- are never squashed into the narrow space beside the middle pieces.
+	artFrame.FarLeft:SetSize(1024, 256)
 	artFrame.FarLeft:SetPoint('BOTTOMRIGHT', artFrame.Left, 'BOTTOMLEFT', 0, 0)
-	artFrame.FarLeft:SetPoint('BOTTOMLEFT', artFrame, 'BOTTOMLEFT', 0, 0)
 	artFrame.FarLeft:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 
 	artFrame.Right = textureContainer:CreateTexture('NUI_Art_Classic_Right', 'BACKGROUND')
@@ -285,8 +287,8 @@ local function CreateArtwork()
 	artFrame.Right:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 	artFrame.FarRight = textureContainer:CreateTexture('NUI_Art_Classic_FarRight', 'BACKGROUND')
 	artFrame.FarRight:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-right2.png')
+	artFrame.FarRight:SetSize(1024, 256)
 	artFrame.FarRight:SetPoint('BOTTOMLEFT', artFrame.Right, 'BOTTOMRIGHT')
-	artFrame.FarRight:SetPoint('BOTTOMRIGHT', artFrame, 'BOTTOMRIGHT')
 	artFrame.FarRight:SetVertexColor(1, 1, 1)  -- no tint: show art as drawn
 
 	--print("[NecrosisUI] CreateArtwork() completed successfully!")

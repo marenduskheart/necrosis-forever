@@ -1,6 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="Framework.lua" />
 	<Script file="Global-Framework.lua" />
-	<Script file="Style.lua" />
+	<!-- Style.lua is not loaded: on WoW Forever the banner is built in Initialize_retail.lua.
+	     Loading both drew a second banner with squashed end pieces. -->
 	<Include file="Framework.xml" />
 </Ui>
