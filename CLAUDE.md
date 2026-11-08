@@ -22,7 +22,7 @@ shared build must stay GPL with source included.
 - Expect conflicts on lines with texture paths: resolve by keeping upstream's
   change but with `NecrosisForever` in the path.
 
-## What the fork changed (commit 472b2e9)
+## What the fork changed (commit "feat: fork Necrosis as Necrosis Forever")
 
 - Folder and all `.toc` files renamed `Necrosis*` -> `NecrosisForever*`; title
   "Necrosis Forever". The `_forever_` client loads `NecrosisForever_Camelot.toc`
