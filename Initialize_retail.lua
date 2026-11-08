@@ -265,26 +265,26 @@ local function CreateArtwork()
 	textureContainer:SetScale(scale)
 
 	artFrame.Center = textureContainer:CreateTexture('NUI_Art_Classic_Center', 'BACKGROUND')
-	artFrame.Center:SetTexture('Interface\\AddOns\\Necrosis\\UI\\BottomBanner\\Images\\base-center')
+	artFrame.Center:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-center.png')
 	artFrame.Center:SetPoint('BOTTOM', artFrame, 'BOTTOM')
 	artFrame.Center:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
 
 	artFrame.Left = textureContainer:CreateTexture('NUI_Art_Classic_Left', 'BACKGROUND')
-	artFrame.Left:SetTexture('Interface\\AddOns\\Necrosis\\UI\\BottomBanner\\Images\\base-left1')
+	artFrame.Left:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-left1.png')
 	artFrame.Left:SetPoint('BOTTOMRIGHT', artFrame.Center, 'BOTTOMLEFT', 0, 0)
 	artFrame.Left:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
 	artFrame.FarLeft = textureContainer:CreateTexture('NUI_Art_Classic_FarLeft', 'BACKGROUND')
-	artFrame.FarLeft:SetTexture('Interface\\AddOns\\Necrosis\\UI\\BottomBanner\\Images\\base-left2')
+	artFrame.FarLeft:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-left2.png')
 	artFrame.FarLeft:SetPoint('BOTTOMRIGHT', artFrame.Left, 'BOTTOMLEFT', 0, 0)
 	artFrame.FarLeft:SetPoint('BOTTOMLEFT', artFrame, 'BOTTOMLEFT', 0, 0)
 	artFrame.FarLeft:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
 
 	artFrame.Right = textureContainer:CreateTexture('NUI_Art_Classic_Right', 'BACKGROUND')
-	artFrame.Right:SetTexture('Interface\\AddOns\\Necrosis\\UI\\BottomBanner\\Images\\base-right1')
+	artFrame.Right:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-right1.png')
 	artFrame.Right:SetPoint('BOTTOMLEFT', artFrame.Center, 'BOTTOMRIGHT')
 	artFrame.Right:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
 	artFrame.FarRight = textureContainer:CreateTexture('NUI_Art_Classic_FarRight', 'BACKGROUND')
-	artFrame.FarRight:SetTexture('Interface\\AddOns\\Necrosis\\UI\\BottomBanner\\Images\\base-right2')
+	artFrame.FarRight:SetTexture('Interface\\AddOns\\NecrosisForever\\UI\\BottomBanner\\Images\\base-right2.png')
 	artFrame.FarRight:SetPoint('BOTTOMLEFT', artFrame.Right, 'BOTTOMRIGHT')
 	artFrame.FarRight:SetPoint('BOTTOMRIGHT', artFrame, 'BOTTOMRIGHT')
 	artFrame.FarRight:SetVertexColor(0.7, 0.3, 1.0)  -- Violet moyen
@@ -332,8 +332,8 @@ local function GetMetadata(addon, field)
 end
 
 Necrosis.Data = {
-	Version = GetMetadata("Necrosis", "Version"),
-	AppName = "Necrosis",
+	Version = GetMetadata("NecrosisForever", "Version"),
+	AppName = "NecrosisForever",
 	LastConfig = "8.0.6",
 	Enabled = false,
 }
@@ -685,7 +685,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
 				local btn = _G["NecrosisMainSphere"] or _G["NecrosisButton"]
 				if btn then
 					-- Apply default texture if not already set
-					local texturePath = "Interface\\AddOns\\Necrosis\\UI\\666\\Shard0"
+					local texturePath = "Interface\\AddOns\\NecrosisForever\\UI\\666\\Shard0"
 					btn:SetNormalTexture(texturePath)
 				end
 			end)
@@ -1121,7 +1121,7 @@ function Necrosis:Initialize(Config)
 				local btn = CreateFrame("Button", "NecrosisMainSphere", UIParent, "SecureUnitButtonTemplate")
 				-- Apply saved skin color, or default to 666
 				local skinColor = NecrosisConfig.NecrosisColor or "666"
-				btn:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..skinColor.."\\Shard16")
+				btn:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..skinColor.."\\Shard16")
 				btn:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight")
 				btn:GetHighlightTexture():SetBlendMode("ADD")
 				btn:SetWidth(58)

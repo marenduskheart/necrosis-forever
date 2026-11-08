@@ -372,7 +372,7 @@ function Necrosis:Speech_Then(Spell, Speech)
 		Speech.Steed = {}
 		local f = _G[Necrosis.Warlock_Buttons.mounts.f]
 		if f then
-			f:SetNormalTexture("Interface\\Addons\\Necrosis\\UI\\MountButton-02")
+			f:SetNormalTexture("Interface\\Addons\\NecrosisForever\\UI\\MountButton-02")
 		end
 	-- messages to be posted after 'Soulstone' is cast
 	elseif Necrosis.IsSpellRez(Spell.Name) then -- 11

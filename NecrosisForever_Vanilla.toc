@@ -1,18 +1,16 @@
-## Interface: 120005,120001,120000
+## Interface: 11508
 ## X-Min-Interface: 110207
 ## X-Min-Interface-Classic: 11508
 ## X-Min-Interface-BCC: 20505
 ## X-Min-Interface-Wrath: 30403
 ## X-Min-Interface-Cata: 40400
-## X-Min-Interface-MOP: 50503
-## X-Min-Interface-Midnight: 120001
 
-## Title     : .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis 8 Midnight
-## Title-ruRU: .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis Midnight (Русский)
-## Title-frFR: .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis Midnight (Français)
+## Title     : .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever
+## Title-ruRU: .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever (Русский)
+## Title-frFR: .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever (Français)
 
 ## Notes: Warlock UI & Shard Management
-## Notes-frFR: Gestion graphique des shards, interface Démoniste, ban , asservir
+## Notes-frFR: Gestion graphique des shards, interface Démoniste, ban , asservir 
 ## Notes-ruRU: Менеджер заклинаний, камней и демонов для чернокнижника.
 ## Version: 8.8.5
 ## Website: https://github.com/CKNOEP/Necrosis
@@ -22,6 +20,8 @@
 ## X-Category: Warlock
 ## LoadOnDemand: 0
 ## SavedVariablesPerCharacter: NecrosisConfig
+
+Necrosis.xml
 
 libs\LibStub\LibStub.lua
 libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
@@ -42,6 +42,7 @@ libs\!LibUIDropDownMenu\LibUIDropDownMenu\LibUIDropDownMenu.xml
 libs\LibDataBroker-1.1.lua
 
 Constants.lua
+
 PreLocales.lua
 
 Locales\Localization.lua
@@ -53,13 +54,12 @@ Locales\Localization.RU.lua
 Locales\Localization.TW.lua
 Locales\Localization.MX.lua
 
-Initialize_retail.lua
-Utils.lua
-
 Dialog.lua
+Initialize.lua
+VersionCheck.lua
+Utils.lua
 AFKS.lua
 SummonQueue.lua
-VersionCheck.lua
 Speech\Speech-fr.lua
 Speech\Speech-en.lua
 Speech\Speech-de.lua
@@ -69,34 +69,33 @@ Speech\Speech-cn.lua
 Speech\Speech-ru.lua
 
 Message.lua
-Spells-Retail.lua
+Spells-Vanilla.lua
 
 
-Timers\Functions_retail.lua
+Timers\Functions.lua
 Timers\GraphicalTimers.lua
 Timers\OtherTimers.lua
 
 
 
-XML\Attributes_retail.lua
+
+XML\Attributes.lua
 
 XML\Options-Messages.lua
 XML\Options-SummonQueue.lua
-XML\Options-Sphere_retail.lua
-XML\Options-Buttons_retail.lua
-XML\Options-Menus_retail.lua
-XML\Options-Timers_retail.lua
-XML\Options-Misc_retail.lua
+XML\Options-Sphere-Vanilla.lua
+XML\Options-Buttons-Vanilla.lua
+XML\Options-Menus.lua
+XML\Options-Timers.lua
+XML\Options-Misc.lua
 XML\Options-Overlay.lua
 
-XML\Panel_retail.lua
+XML\Panel.lua
 XML\AboutPanel.lua
-Necrosis_retail.lua
 Necrosis.lua
-XML\XML_retail.lua
+XML\XML.lua
 ThreatMeter.lua
 
-SpellActivations\SpellActivations.xml
-
-UI\BottomBanner\Framework_retail.lua
 UI\BottomBanner\Init.xml
+
+SpellActivations\SpellActivations.xml

@@ -101,11 +101,11 @@ L["CURSE_MENU_TEXT_1"] = "[Правый Клик] Для удержания ме
 L["CURSE_MENU_TEXT_2"] = "Авто-Режим: Закрытие при выходе из боя"
 L["DOMINATION_COOLDOWN"] = "[Правый Клик] Быстрый вызов"
 --
-L["SOUND_FEAR"] = "Interface\\AddOns\\Necrosis\\sounds\\Fear-Ru.mp3"
-L["SOUND_SOUL_STONE_END"] = "Interface\\AddOns\\Necrosis\\sounds\\SoulstoneEnd-Ru.mp3"
-L["SOUND_ENSLAVE_END"] = "Interface\\AddOns\\Necrosis\\sounds\\EnslaveDemonEnd-Ru.mp3"
-L["SOUND_SHADOW_TRANCE"] = "Interface\\AddOns\\Necrosis\\sounds\\ShadowTrance-Ru.mp3"
-L["SOUND_BACKLASH"] = "Interface\\AddOns\\Necrosis\\sounds\\Backlash-Ru.mp3"
+L["SOUND_FEAR"] = "Interface\\AddOns\\NecrosisForever\\sounds\\Fear-Ru.mp3"
+L["SOUND_SOUL_STONE_END"] = "Interface\\AddOns\\NecrosisForever\\sounds\\SoulstoneEnd-Ru.mp3"
+L["SOUND_ENSLAVE_END"] = "Interface\\AddOns\\NecrosisForever\\sounds\\EnslaveDemonEnd-Ru.mp3"
+L["SOUND_SHADOW_TRANCE"] = "Interface\\AddOns\\NecrosisForever\\sounds\\ShadowTrance-Ru.mp3"
+L["SOUND_BACKLASH"] = "Interface\\AddOns\\NecrosisForever\\sounds\\Backlash-Ru.mp3"
 --
 L["PROC_SHADOW_TRANCE"] = "<white>Т<lightPurple1>е<lightPurple2>н<purple>е<darkPurple1>в<darkPurple2>о<darkPurple1>й Т<purple>р<lightPurple2>а<lightPurple1>н<white>с"
 L["PROC_BACKLASH"] = "<white>О<lightPurple1>т<lightPurple2>в<purple>е<darkPurple1>т<darkPurple2>н<darkPurple1>ы<darkPurple2>й У<purple>д<lightPurple2>а<lightPurple1>р"

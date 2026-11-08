@@ -1,16 +1,16 @@
-## Interface: 11508
+## Interface: 20506
 ## X-Min-Interface: 110207
 ## X-Min-Interface-Classic: 11508
-## X-Min-Interface-BCC: 20505
+## X-Min-Interface-BCC: 20506
 ## X-Min-Interface-Wrath: 30403
 ## X-Min-Interface-Cata: 40400
 
-## Title     : .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis 8 Vanilla
-## Title-ruRU: .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis Vanilla (Русский)
-## Title-frFR: .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis Vanilla (Français)
+## Title     : .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever
+## Title-ruRU: .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever (Русский)
+## Title-frFR: .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever (Français)
 
 ## Notes: Warlock UI & Shard Management
-## Notes-frFR: Gestion graphique des shards, interface Démoniste, ban , asservir 
+## Notes-frFR: Gestion graphique des shards, interface Démoniste, ban , asservir
 ## Notes-ruRU: Менеджер заклинаний, камней и демонов для чернокнижника.
 ## Version: 8.8.5
 ## Website: https://github.com/CKNOEP/Necrosis
@@ -20,7 +20,6 @@
 ## X-Category: Warlock
 ## LoadOnDemand: 0
 ## SavedVariablesPerCharacter: NecrosisConfig
-
 Necrosis.xml
 
 libs\LibStub\LibStub.lua
@@ -56,8 +55,9 @@ Locales\Localization.MX.lua
 
 Dialog.lua
 Initialize.lua
-VersionCheck.lua
 Utils.lua
+VersionCheck.lua
+
 AFKS.lua
 SummonQueue.lua
 Speech\Speech-fr.lua
@@ -79,7 +79,7 @@ Timers\OtherTimers.lua
 
 
 
-XML\Attributes.lua
+XML\Attributes-Anniversary.lua
 
 XML\Options-Messages.lua
 XML\Options-SummonQueue.lua
@@ -95,7 +95,8 @@ XML\AboutPanel.lua
 Necrosis.lua
 XML\XML.lua
 ThreatMeter.lua
-
-UI\BottomBanner\Init.xml
+UI\BottomBanner\Framework.xml
+UI\BottomBanner\Framework.lua
+UI\BottomBanner\Style.lua
 
 SpellActivations\SpellActivations.xml

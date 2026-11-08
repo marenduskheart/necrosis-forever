@@ -4,7 +4,7 @@
 --]]
 
 -- Global constants that need to be available early for localization initialization
-NECROSIS_ID = "Necrosis"
+NECROSIS_ID = "NecrosisForever"
 
 -- Initialize the main addon table early so Dialog.lua can use it
 Necrosis = {

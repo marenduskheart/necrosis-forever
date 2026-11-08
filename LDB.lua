@@ -6,7 +6,7 @@ local L = LibStub("AceLocale-3.0"):GetLocale(NECROSIS_ID, true)
 
 Necrosis.LDB = LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("Necrosis", 
     { type = "data source", 
-      icon = "Interface\\AddOns\\Necrosis\\UI\\CurseMenuButton-01",
+      icon = "Interface\\AddOns\\NecrosisForever\\UI\\CurseMenuButton-01",
       text = L["NECROSIS"],
       label = L["NECROSIS"]
      }

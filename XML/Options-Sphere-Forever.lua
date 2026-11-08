@@ -506,7 +506,7 @@ function Necrosis.Skin_Click(self)
 		local f = _G[Necrosis.Warlock_Buttons.main.f]
 		if f then
 			pcall(function()
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..couleur[ID].."\\Shard0")
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..couleur[ID].."\\Shard0")
 			end)
 		end
 

@@ -559,147 +559,147 @@ This allows a more flexible scheme and should reduce maintenance and impact if W
 --]]
 Necrosis.Warlock_Buttons = {
 	timer 		= {f = "NecrosisSpellTimerButton", tip = "SpellTimer", menu = "Timer", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\SpellTimerButton-Normal",
-					high = "Interface\\AddOns\\Necrosis\\UI\\SpellTimerButton-Highlight",
-					push = "Interface\\AddOns\\Necrosis\\UI\\SpellTimerButton-Pushed",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\SpellTimerButton-Normal",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\SpellTimerButton-Highlight",
+					push = "Interface\\AddOns\\NecrosisForever\\UI\\SpellTimerButton-Pushed",
 					}, --
 	main 		= {f = "NecrosisButton", tip = "Main", anchor = "ANCHOR_LEFT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Shard",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Shard",
 					}, --
 
 	fire_stone 	= {f = "NecrosisFirestoneButton", tip = "Firestone", anchor = "ANCHOR_LEFT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\FirestoneButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\FirestoneButton-03",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\FirestoneButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\FirestoneButton-03",
 					}, --
 	spell_stone = {f = "NecrosisSpellstoneButton", tip = "Spellstone", anchor = "ANCHOR_LEFT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\SpellstoneButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\SpellstoneButton-03",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\SpellstoneButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\SpellstoneButton-03",
 					}, --
 	health_stone= {f = "NecrosisHealthstoneButton", tip = "Healthstone", anchor = "ANCHOR_LEFT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\HealthstoneButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\HealthstoneButton-03",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\HealthstoneButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\HealthstoneButton-03",
 					}, --
 	hearth_stone= {f = "NecrosisHearthstoneButton", tip = "Hearthstone", anchor = "ANCHOR_LEFT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\INV_Misc_Rune_01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\INV_Misc_Rune_01",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\INV_Misc_Rune_01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\INV_Misc_Rune_01",
 					}, --
 	soul_stone 	= {f = "NecrosisSoulstoneButton", tip = "Soulstone", anchor = "ANCHOR_LEFT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\SoulstoneButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\SoulstoneButton-04",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\SoulstoneButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\SoulstoneButton-04",
 					}, --
 	mounts 		= {f = "NecrosisMountButton", tip = "Mount",anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\MountButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\MountButton-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\MountButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\MountButton-02",
 					}, --
 
 	buffs 		= {f = "NecrosisBuffMenuButton", tip = "BuffMenu", menu = "Buff",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\BuffMenuButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\BuffMenuButton-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\BuffMenuButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\BuffMenuButton-02",
 					}, --
 	pets 		= {f = "NecrosisPetMenuButton", tip = "PetMenu", menu = "Pet",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\PetMenuButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\PetMenuButton-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\PetMenuButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\PetMenuButton-02",
 					}, --
 	curses 		= {f = "NecrosisCurseMenuButton", tip = "CurseMenu", menu = "Curse",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\CurseMenuButton-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\CurseMenuButton-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\CurseMenuButton-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\CurseMenuButton-02",
 					}, --
 
 	armor 		= {f = "NecrosisBuffMenu01", tip = "Armor", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Armor-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Armor-01",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Armor-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Armor-01",
 				  }, --
 	
 	fel_armor	= {f = "NecrosisBuffMenu02", tip = "FelArmor", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\FelArmor-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\FelArmor-01",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\FelArmor-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\FelArmor-01",
 			      }, --
 					
 	breath 		= {f = "NecrosisBuffMenu10", tip = "Aqua", anchor = "ANCHOR_RIGHT", can_target = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Aqua-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Aqua-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Aqua-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Aqua-02",
 					}, --
 	invis 		= {f = "NecrosisBuffMenu03", tip = "Invisible", anchor = "ANCHOR_RIGHT", can_target = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Invisible-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Invisible-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Invisible-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Invisible-02",
 					}, --
 	eye 		= {f = "NecrosisBuffMenu04", tip = "Kilrogg", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Kilrogg-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Kilrogg-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Kilrogg-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Kilrogg-02",
 					}, --
 	summoning 	= {f = "NecrosisBuffMenu05", tip = "TP", anchor = "ANCHOR_RIGHT", can_target = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\TP-RitualOfSummon",
-					high = "Interface\\AddOns\\Necrosis\\UI\\TP-RitualOfSummon",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\TP-RitualOfSummon",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\TP-RitualOfSummon",
 					}, --
 	link 		= {f = "NecrosisBuffMenu06", tip = "SoulLink", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\SoulLink-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\SoulLink-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\SoulLink-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\SoulLink-02",
 					}, --
 	ward 		= {f = "NecrosisBuffMenu07", tip = "ShadowProtection", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\ShadowProtection-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\ShadowProtection-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\ShadowProtection-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\ShadowProtection-02",
 					}, --
 	renforcement= {f = "NecrosisBuffMenu08", tip = "Renforcement", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Renforcement-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Renforcement-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Renforcement-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Renforcement-02",
 					}, --
 	banish 		= {f = "NecrosisBuffMenu09", tip = "Banish", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Banish-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Banish-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Banish-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Banish-02",
 					}, --
 
 	domination 	= {f = "NecrosisPetMenu01", tip = "Domination", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Domination-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Domination-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Domination-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Domination-02",
 					}, --
 	imp 		= {f = "NecrosisPetMenu02", tip = "Imp", anchor = "ANCHOR_RIGHT", pet = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Imp-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Imp-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Imp-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Imp-02",
 					}, --
 	voidwalker 	= {f = "NecrosisPetMenu03", tip = "Voidwalker", anchor = "ANCHOR_RIGHT", pet = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Voidwalker-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Voidwalker-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Voidwalker-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Voidwalker-02",
 					}, --
 	succubus 	= {f = "NecrosisPetMenu04", tip = "Succubus", anchor = "ANCHOR_RIGHT", pet = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Succubus-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Succubus-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Succubus-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Succubus-02",
 					}, --
 					
 	inccubus 	= {f = "NecrosisPetMenu11", tip = "Inccubus", anchor = "ANCHOR_RIGHT", pet = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Inccubus-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Inccubus-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Inccubus-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Inccubus-02",
 					}, --
 	felhunter 	= {f = "NecrosisPetMenu05", tip = "Felhunter", anchor = "ANCHOR_RIGHT", pet = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Felhunter-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Felhunter-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Felhunter-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Felhunter-02",
 					}, --
 --TBC
 	felguard 	= {f = "NecrosisPetMenu10", tip = "Felguard", anchor = "ANCHOR_RIGHT", pet = true,
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Felguard-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Felguard-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Felguard-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Felguard-02",
 					}, --	
 					
 	inferno 	= {f = "NecrosisPetMenu06", tip = "Infernal", anchor = "ANCHOR_RIGHT", 
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Infernal-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Infernal-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Infernal-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Infernal-02",
 					}, --
 	rit_of_doom	= {f = "NecrosisPetMenu07", tip = "Doomguard", anchor = "ANCHOR_RIGHT", 
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Doomguard-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Doomguard-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Doomguard-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Doomguard-02",
 					}, --
 	enslave 	= {f = "NecrosisPetMenu08", tip = "Enslave", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Enslave-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Enslave-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Enslave-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Enslave-02",
 					}, --
 	sacrifice 	= {f = "NecrosisPetMenu09", tip = "Sacrifice", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Sacrifice-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Sacrifice-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Sacrifice-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Sacrifice-02",
 					}, --
 				
 	
 	destroy_shards = {f = "NecrosisDestroyShardsButton", tip = "DestroyShards", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\ShardDestroy-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\ShardDestroy-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\ShardDestroy-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\ShardDestroy-02",
 					func = function(self,arg1) 
 					
 						if arg1 == "RightButton" then
@@ -720,56 +720,56 @@ Necrosis.Warlock_Buttons = {
 -- CURSE
 
 	weakness 	= {f = "NecrosisCurseMenu01", tip = "Weakness", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Weakness-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Weakness-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Weakness-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Weakness-02",
 					}, --
 	agony 		= {f = "NecrosisCurseMenu02", tip = "Agony", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Agony-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Agony-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Agony-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Agony-02",
 					}, --
 	tongues 	= {f = "NecrosisCurseMenu03", tip = "Tongues", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Tongues-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Tongues-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Tongues-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Tongues-02",
 					}, --
 	exhaustion 	= {f = "NecrosisCurseMenu04", tip = "Exhaust", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Exhaust-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Exhaust-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Exhaust-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Exhaust-02",
 					}, --
 	elements 	= {f = "NecrosisCurseMenu05", tip = "Elements", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Elements-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Elements-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Elements-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Elements-02",
 					}, --
 	doom 		= {f = "NecrosisCurseMenu06", tip = "Doom", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Doom-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Doom-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Doom-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Doom-02",
 					}, --
 	corruption 	= {f = "NecrosisCurseMenu07", tip = "Corruption", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Corruption-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Corruption-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Corruption-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Corruption-02",
 					}, --
 	recklessness= {f = "NecrosisCurseMenu08", tip = "Reckless", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Reckless-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Reckless-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Reckless-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Reckless-02",
 					}, --
 	shadow		= {f = "NecrosisCurseMenu09", tip = "Shadow", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Shadow-01",
-					high = "Interface\\AddOns\\Necrosis\\UI\\Shadow-02",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Shadow-01",
+					high = "Interface\\AddOns\\NecrosisForever\\UI\\Shadow-02",
 					}, --
 
 	trance 		= {f = "NecrosisShadowTranceButton", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\ShadowTrance-Icon",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\ShadowTrance-Icon",
 					pos = {"CENTER", "UIParent", "CENTER", 20, 0},}, --
 	backlash 	= {f = "NecrosisBacklashButton", anchor = "ANCHOR_RIGHT",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\Backlash-Icon",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\Backlash-Icon",
 					pos = {"CENTER", "UIParent", "CENTER", 60, 0},}, --
 	elemental 	= {f = "NecrosisCreatureAlertButton_elemental",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\ElemAlert",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\ElemAlert",
 					pos = {"CENTER", "UIParent", "CENTER", 140, 0},}, --
 	demon 	    = {f = "NecrosisCreatureAlertButton_demon",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\ElemDemon",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\ElemDemon",
 					pos = {"CENTER", "UIParent", "CENTER", 100, 0},}, --
 	anti_fear 	= {f = "NecrosisAntiFearButton",
-					norm = "Interface\\AddOns\\Necrosis\\UI\\AntiFear-01",
+					norm = "Interface\\AddOns\\NecrosisForever\\UI\\AntiFear-01",
 					pos = {"CENTER", "UIParent", "CENTER", -20, 0},}, --
 }
 

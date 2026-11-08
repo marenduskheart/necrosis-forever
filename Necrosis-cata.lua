@@ -380,7 +380,7 @@ local function ShowAntiFearWarning()
 		if not Local.Warning.Antifear.Actif then
 			Local.Warning.Antifear.Actif = true
 			Necrosis:Msg(Necrosis.ChatMessage.Information.FearProtect, "USER")
-			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\Necrosis\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-02")
+			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\NecrosisForever\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-02")
 			if NecrosisConfig.Sound then PlaySoundFile(Necrosis.Sound.Fear) end
 --			ShowUIPanel(NecrosisAntiFearButton)
 			NecrosisAntiFearButton:Show()
@@ -395,7 +395,7 @@ local function ShowAntiFearWarning()
 				Local.Warning.Antifear.Toggle = 1
 			end
 			Local.Warning.Antifear.Blink = GetTime() + 0.4
-			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\Necrosis\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-0"..Local.Warning.Antifear.Toggle)
+			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\NecrosisForever\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-0"..Local.Warning.Antifear.Toggle)
 		end
 
 	elseif Local.Warning.Antifear.Actif then	-- No antifear on target, but the button is still visible => gonna hide it
@@ -514,7 +514,7 @@ function UpdateIcons()
 	-- Display of the mode icon || Affichage de l'icone liée au mode
 	local f = _G[Necrosis.Warlock_Buttons.soul_stone.f]
 	if f then
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\SoulstoneButton-0"..Local.Stone.Soul.Mode)
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\SoulstoneButton-0"..Local.Stone.Soul.Mode)
 	end
 
 	-- Stone of life || Pierre de vie
@@ -535,7 +535,7 @@ function UpdateIcons()
 	--Display of the mode icon || Affichage de l'icone liée au mode
 	local f = _G[Necrosis.Warlock_Buttons.health_stone.f]
 	if f then
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\HealthstoneButton-0"..Local.Stone.Health.Mode)
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\HealthstoneButton-0"..Local.Stone.Health.Mode)
 	end
 
 	-- Stone of spell || Pierre de sort
@@ -1021,10 +1021,10 @@ local function UpdateArmorReminder()
 
 		if felArmorSpell then
 			-- Fel Armor is stronger, always use it if available
-			armorButton:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\FelArmor-01")
+			armorButton:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\FelArmor-01")
 		elseif armorSpell then
 			-- Fall back to regular Armor if Fel Armor not known
-			armorButton:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\Armor-01")
+			armorButton:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\Armor-01")
 		end
 	end
 end
@@ -2252,13 +2252,13 @@ function Necrosis:UpdateHealth()
 		if health == healthMax then
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard32") then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard32"
-				fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		else
 			local taux = math.floor(health / (healthMax / 16))
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard"..taux) then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..taux
-				fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		end
 	end
@@ -2277,7 +2277,7 @@ function Necrosis:UpdatePower()
 		
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard32") then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..Power.."-2"
-				fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		
 	end
@@ -2325,13 +2325,13 @@ function Necrosis:UpdateMana()
 		if mana == manaMax then
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard32") then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard32"
-				fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		else
 			local taux = math.floor(mana / (manaMax / 16))
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard"..taux) then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..taux
-				fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		end
 	end
@@ -2711,21 +2711,21 @@ function Necrosis:BagExplore(arg)
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard"..Local.Soulshard.Count) then
 				--Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..Local.Soulshard.Count
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..Local.Soulshard.Count.."-2"
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		elseif not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard32") then
 			Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard32"
-			f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+			f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 		end
 	elseif NecrosisConfig.Circle == 2 and (Local.Stone.Soul.Mode == 1 or Local.Stone.Soul.Mode == 2) then
 		if (Local.Soulshard.Count <= 32) then
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard"..Local.Soulshard.Count) then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard"..Local.Soulshard.Count
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		elseif not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard32") then
 			Local.LastSphereSkin = NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard32"
-			f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+			f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 		end
 	end
 	if NecrosisConfig.ShowCount then

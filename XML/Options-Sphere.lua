@@ -401,7 +401,7 @@ function Necrosis.Skin_Click(self)
 	UIDropDownMenu_SetSelectedID(NecrosisSkinSelection, ID)
 	NecrosisConfig.NecrosisColor = couleur[ID]
 	local f = _G[Necrosis.Warlock_Buttons.main.f]
-	f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..couleur[ID].."\\Shard16")
+	f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..couleur[ID].."\\Shard16")
 end
 
 -- Fonctions du Dropdown des Events de la sphère

@@ -177,24 +177,24 @@ C_Timer.After(0.5, function()
 	artFrame:SetPoint('BOTTOMLEFT', UIParent, 'BOTTOMLEFT', 0, 0)
 
 	artFrame.Center = artFrame:CreateTexture('NUI_Art_Classic_Center', 'BACKGROUND')
-	artFrame.Center:SetTexture('Interface\\AddOns\\Necrosis\\NecrosisUI\\Themes\\Classic\\Images\\base-center')
+	artFrame.Center:SetTexture('Interface\\AddOns\\NecrosisForever\\NecrosisUI\\Themes\\Classic\\Images\\base-center')
 	artFrame.Center:SetPoint('BOTTOM', artFrame, 'BOTTOM')
 
 	artFrame.Left = artFrame:CreateTexture('NUI_Art_Classic_Left', 'BACKGROUND')
-	artFrame.Left:SetTexture('Interface\\AddOns\\Necrosis\\NecrosisUI\\Themes\\Classic\\Images\\base-left1')
+	artFrame.Left:SetTexture('Interface\\AddOns\\NecrosisForever\\NecrosisUI\\Themes\\Classic\\Images\\base-left1')
 	artFrame.Left:SetPoint('BOTTOMRIGHT', artFrame.Center, 'BOTTOMLEFT', 0, 0)
 
 	artFrame.FarLeft = artFrame:CreateTexture('NUI_Art_Classic_FarLeft', 'BACKGROUND')
-	artFrame.FarLeft:SetTexture('Interface\\AddOns\\Necrosis\\NecrosisUI\\Themes\\Classic\\Images\\base-left2')
+	artFrame.FarLeft:SetTexture('Interface\\AddOns\\NecrosisForever\\NecrosisUI\\Themes\\Classic\\Images\\base-left2')
 	artFrame.FarLeft:SetPoint('BOTTOMRIGHT', artFrame.Left, 'BOTTOMLEFT', 0, 0)
 	artFrame.FarLeft:SetPoint('BOTTOMLEFT', NecrosisUI, 'BOTTOMLEFT', 0, 0)
 
 	artFrame.Right = artFrame:CreateTexture('NUI_Art_Classic_Right', 'BACKGROUND')
-	artFrame.Right:SetTexture('Interface\\AddOns\\Necrosis\\NecrosisUI\\Themes\\Classic\\Images\\base-right1')
+	artFrame.Right:SetTexture('Interface\\AddOns\\NecrosisForever\\NecrosisUI\\Themes\\Classic\\Images\\base-right1')
 	artFrame.Right:SetPoint('BOTTOMLEFT', artFrame.Center, 'BOTTOMRIGHT')
 
 	artFrame.FarRight = artFrame:CreateTexture('NUI_Art_Classic_FarRight', 'BACKGROUND')
-	artFrame.FarRight:SetTexture('Interface\\AddOns\\Necrosis\\NecrosisUI\\Themes\\Classic\\Images\\base-right2')
+	artFrame.FarRight:SetTexture('Interface\\AddOns\\NecrosisForever\\NecrosisUI\\Themes\\Classic\\Images\\base-right2')
 	artFrame.FarRight:SetPoint('BOTTOMLEFT', artFrame.Right, 'BOTTOMRIGHT')
 	artFrame.FarRight:SetPoint('BOTTOMRIGHT', NecrosisUI, 'BOTTOMRIGHT')
 
@@ -203,7 +203,7 @@ end)
 -- Compatibility wrapper for GetAddOnMetadata (deprecated in modern WoW)
 -- Simple version storage (from TOC file)
 Necrosis.Data = {
-	AppName = "Necrosis",
+	AppName = "NecrosisForever",
 	Version = "8.8.5",  -- Update manually when releasing
 	Enabled = false,
 }
@@ -749,7 +749,7 @@ function Necrosis:Initialize(Config)
 					-- No indicator: use full sphere with configured color
 					initialSkin = NecrosisConfig.NecrosisColor.."\\Shard32"
 				end
-				btn:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..initialSkin)
+				btn:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..initialSkin)
 				btn:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight")
 				btn:GetHighlightTexture():SetBlendMode("ADD")
 				btn:SetWidth(58)

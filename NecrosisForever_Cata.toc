@@ -5,9 +5,9 @@
 ## X-Min-Interface-Wrath: 30403
 ## X-Min-Interface-Cata: 40400
 
-## Title     : .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis 8 Cata
-## Title-ruRU: .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis Cata (Русский)
-## Title-frFR: .|TInterface/AddOns/Necrosis/UI/Icon-Small:16:16|t  Necrosis Cata (Français)
+## Title     : .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever
+## Title-ruRU: .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever (Русский)
+## Title-frFR: .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever (Français)
 
 ## Notes: Warlock UI & Shard Management
 ## Notes-frFR: Gestion graphique des shards, interface Démoniste, ban , asservir 

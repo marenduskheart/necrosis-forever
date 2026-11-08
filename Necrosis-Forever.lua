@@ -415,7 +415,7 @@ local function ShowAntiFearWarning()
 		if not Local.Warning.Antifear.Actif then
 			Local.Warning.Antifear.Actif = true
 			Necrosis:Msg(Necrosis.ChatMessage.Information.FearProtect, "USER")
-			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\Necrosis\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-02")
+			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\NecrosisForever\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-02")
 			if NecrosisConfig.Sound then PlaySoundFile(Necrosis.Sound.Fear) end
 --			ShowUIPanel(NecrosisAntiFearButton)
 			NecrosisAntiFearButton:Show()
@@ -430,7 +430,7 @@ local function ShowAntiFearWarning()
 				Local.Warning.Antifear.Toggle = 1
 			end
 			Local.Warning.Antifear.Blink = GetTime() + 0.4
-			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\Necrosis\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-0"..Local.Warning.Antifear.Toggle)
+			NecrosisAntiFearButton:SetNormalTexture("Interface\\Addons\\NecrosisForever\\UI\\AntiFear"..Local.Warning.Antifear.Icon[Actif].."-0"..Local.Warning.Antifear.Toggle)
 		end
 
 	elseif Local.Warning.Antifear.Actif then	-- No antifear on target, but the button is still visible => gonna hide it
@@ -451,7 +451,7 @@ local function RefreshHealthstoneCooldown()
 		f.cooldown:SetUseCircularEdge(true)
 		f.cooldown:SetDrawSwipe(true)
 		-- SetSwipeTexture resets the tint to white, so it comes first (issue #46) || SetSwipeTexture remet la teinte en blanc : on l'appelle avant la couleur
-		f.cooldown:SetSwipeTexture("Interface\\AddOns\\Necrosis\\UI\\Mask", 0, 0, 0, 0.7)
+		f.cooldown:SetSwipeTexture("Interface\\AddOns\\NecrosisForever\\UI\\Mask", 0, 0, 0, 0.7)
 		f.cooldown:SetSwipeColor(0, 0, 0, 0.7)
 		f.cooldown:SetDrawEdge(true)
 		f.cooldown:SetHideCountdownNumbers(true)
@@ -513,14 +513,14 @@ function UpdateIcons()
 	-- Display of the mode icon || Affichage de l'icone liée au mode
 	local f = _G[Necrosis.Warlock_Buttons.soul_stone.f]
 	if f then
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\SoulstoneButton-0"..Local.Stone.Soul.Mode)
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\SoulstoneButton-0"..Local.Stone.Soul.Mode)
 
 		-- Create circular cooldown if it doesn't exist
 		if not f.cooldown then
 			-- Create circular mask
 			if not f.cdMask then
 				f.cdMask = f:CreateMaskTexture()
-				f.cdMask:SetTexture("Interface\\AddOns\\Necrosis\\UI\\Mask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
+				f.cdMask:SetTexture("Interface\\AddOns\\NecrosisForever\\UI\\Mask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
 				f.cdMask:SetAllPoints(f)
 
 				-- Apply mask to button texture
@@ -537,7 +537,7 @@ function UpdateIcons()
 				f.cooldown:SetUseCircularEdge(true)
 				f.cooldown:SetDrawSwipe(true)
 				-- SetSwipeTexture resets the tint to white, so it comes first (issue #46) || SetSwipeTexture remet la teinte en blanc : on l'appelle avant la couleur
-				f.cooldown:SetSwipeTexture("Interface\\AddOns\\Necrosis\\UI\\Mask", 0, 0, 0, 0.7)
+				f.cooldown:SetSwipeTexture("Interface\\AddOns\\NecrosisForever\\UI\\Mask", 0, 0, 0, 0.7)
 				f.cooldown:SetSwipeColor(0, 0, 0, 0.7)
 				f.cooldown:SetDrawEdge(true)
 				f.cooldown:SetHideCountdownNumbers(true)
@@ -573,7 +573,7 @@ function UpdateIcons()
 	--Display of the mode icon || Affichage de l'icone liée au mode
 	local f = _G[Necrosis.Warlock_Buttons.health_stone.f]
 	if f then
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\HealthstoneButton-0"..Local.Stone.Health.Mode)
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\HealthstoneButton-0"..Local.Stone.Health.Mode)
 		RefreshHealthstoneCooldown()
 	end
 	if Necrosis.Debug.bags then
@@ -614,7 +614,7 @@ function UpdateIcons()
 	-- Display of the mode icon || Affichage de l'icone liée au mode
 	local f = _G[Necrosis.Warlock_Buttons.spell_stone.f]
 	if f then
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\SpellstoneButton-0"..Local.Stone.Spell.Mode)
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\SpellstoneButton-0"..Local.Stone.Spell.Mode)
 	end
 
 	-- Fire stone || Pierre de feu
@@ -646,7 +646,7 @@ function UpdateIcons()
 	-- Display of the mode icon || Affichage de l'icone liée au mode
 	local f = _G[Necrosis.Warlock_Buttons.fire_stone.f]
 	if f then
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\FirestoneButton-0"..Local.Stone.Fire.Mode)
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\FirestoneButton-0"..Local.Stone.Fire.Mode)
 	end
 
 	-- Display resurrection timer on soulstone button if timers exist || Affichage du minuteur de rez sur le bouton SS s'il existe
@@ -1447,7 +1447,7 @@ function Necrosis:OnEvent(event,...)
 					-- Apply the saved skin texture
 					local fm = _G[Necrosis.Warlock_Buttons.main.f]
 					if fm then
-						fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..NecrosisConfig.NecrosisColor.."\\Shard0")
+						fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..NecrosisConfig.NecrosisColor.."\\Shard0")
 						Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard0"
 					end
 					-- Show health counter
@@ -2694,13 +2694,13 @@ function Necrosis:UpdateMana()
 			if mana == manaMax then
 				if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard16") then
 					Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard16"
-					fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+					fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 				end
 			else
 				local taux = math.floor(mana / (manaMax / 16))
 				if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard"..taux) then
 					Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..taux
-					fm:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+					fm:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 				end
 			end
 		end
@@ -3105,21 +3105,21 @@ function Necrosis:BagExplore(arg)
 		if (Local.Soulshard.Count <= 32) then
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard"..Local.Soulshard.Count) then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard"..Local.Soulshard.Count
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		elseif not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor.."\\Shard32") then
 			Local.LastSphereSkin = NecrosisConfig.NecrosisColor.."\\Shard32"
-			f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+			f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 		end
 	elseif NecrosisConfig.Circle == 2 and (Local.Stone.Soul.Mode == 1 or Local.Stone.Soul.Mode == 2) then
 		if (Local.Soulshard.Count <= 32) then
 			if not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard"..Local.Soulshard.Count) then
 				Local.LastSphereSkin = NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard"..Local.Soulshard.Count
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 			end
 		elseif not (Local.LastSphereSkin == NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard32") then
 			Local.LastSphereSkin = NecrosisConfig.NecrosisColor:gsub("Turquoise", "Bleu"):gsub("Rose", "Bleu"):gsub("Orange", "Bleu").."\\Shard32"
-			f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..Local.LastSphereSkin)
+			f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..Local.LastSphereSkin)
 		end
 	end
 	if NecrosisConfig.ShowCount then

@@ -12,3 +12,6 @@
 # Backup / temporary files
 *.bak
 *.tmp
+
+# macOS
+.DS_Store

@@ -527,7 +527,7 @@ function AFKS:Init()
 	self.AFKMode.bottom.logo = self.AFKMode:CreateTexture(nil, 'OVERLAY')
 	self.AFKMode.bottom.logo:SetSize(474, 474)
 	self.AFKMode.bottom.logo:SetPoint("CENTER", self.AFKMode.bottom, "CENTER", 0, -10)
-	self.AFKMode.bottom.logo:SetTexture("Interface\\AddOns\\Necrosis\\XML\\Interface\\logo.blp")
+	self.AFKMode.bottom.logo:SetTexture("Interface\\AddOns\\NecrosisForever\\XML\\Interface\\logo.blp")
 
 
 	self.AFKMode.bottom.specpanel = self.AFKMode.bottom:CreateTexture(nil, 'BACKGROUND')

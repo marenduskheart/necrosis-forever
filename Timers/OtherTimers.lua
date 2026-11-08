@@ -70,7 +70,7 @@ function Necrosis:RezTimerUpdate(SpellTimer, LastUpdate)
 	local f = _G[Necrosis.Warlock_Buttons.main.f]
 	if not Time then
 		NecrosisShardCount:SetText("???")
-		f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\Shard")
+		f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\Shard")
 		return LastUpdate
 	end
 
@@ -109,16 +109,16 @@ function Necrosis:RezTimerUpdate(SpellTimer, LastUpdate)
 		if (Minutes >= 16) then
 			if not (LastUpdate == "Turquoise\\Shard"..(Minutes - 15)) then
 				LastUpdate = "Turquoise\\Shard"..(Minutes - 15)
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..LastUpdate)
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..LastUpdate)
 			end
 		elseif (Minutes >= 1 or Secondes >= 33) then
 			if not (LastUpdate == "Orange\\Shard"..(Minutes + 1)) then
 				LastUpdate = "Orange\\Shard"..(Minutes + 1)
-				f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..LastUpdate)
+				f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..LastUpdate)
 			end
 		elseif not (LastUpdate == "Rose\\Shard"..Secondes) then
 			LastUpdate = "Rose\\Shard"..Secondes
-			f:SetNormalTexture("Interface\\AddOns\\Necrosis\\UI\\"..LastUpdate)
+			f:SetNormalTexture("Interface\\AddOns\\NecrosisForever\\UI\\"..LastUpdate)
 		end
 	end
 
