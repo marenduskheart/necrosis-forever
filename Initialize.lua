@@ -6,7 +6,7 @@
     Features removed: Soul Link, Detect Invisibility, Sacrifice Voidwalker
 --]]
 
---print("[NECROSIS] Initialize_retail.lua loaded!")
+--print("[NECROSIS] Initialize.lua loaded!")
 
 -- On définit _G comme étant le tableau contenant toutes les frames existantes.
 local _G = getfenv(0)
@@ -321,7 +321,7 @@ end
 	end)
 end
 
--- Theme artwork is now handled by Initialize_retail.lua
+-- Theme artwork is now handled by Initialize.lua
 
 -- Compatibility wrapper for GetAddOnMetadata (deprecated in modern WoW)
 local function GetMetadata(addon, field)
@@ -463,7 +463,7 @@ Necrosis.Config = {
 
 NecrosisConfig = {}
 
--- Initialize early - these will be used by XML_retail.lua functions
+-- Initialize early - these will be used by XML.lua functions
 NecrosisConfig.FramePosition = {
 	["NecrosisSpellTimerButton"] = {"CENTER", "UIParent", "CENTER", 100, 300},
 	["NecrosisMainSphere"] = {"BOTTOM", "UIParent", "BOTTOM", 0, 59.01052474975586, 1.429999947547913},

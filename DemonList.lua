@@ -1,11 +1,11 @@
 --[[
     Necrosis
-    Forever (Camelot) overrides.
+    Demon list for WoW Forever.
 
-    Forever runs the Retail code base (Initialize_retail, Spells-Retail, Options-*_retail...)
-    but has the classic demon roster: no Sayaad, Darkglare, Vilefiend nor Tyrant.
+    The code base came from upstream's Retail version, but Forever has the
+    classic demon roster: no Sayaad, Darkglare, Vilefiend nor Tyrant.
 
-    This file MUST be loaded after Spells-Retail.lua: it replaces Warlock_Lists.pets,
+    This file MUST be loaded after Spells.lua: it replaces Warlock_Lists.pets,
     which is defined there, and keeps NameDemon / DemonName in the same order.
 --]]
 

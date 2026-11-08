@@ -1,10 +1,4 @@
 ## Interface: 16001
-## X-Min-Interface: 110207
-## X-Min-Interface-Classic: 11508
-## X-Min-Interface-BCC: 20506
-## X-Min-Interface-Wrath: 30403
-## X-Min-Interface-Cata: 40400
-## X-Min-Interface-MOP: 50503
 ## X-Min-Interface-Forever: 160001
 
 ## Title     : .|TInterface/AddOns/NecrosisForever/UI/Icon-Small:16:16|t  Necrosis Forever
@@ -15,7 +9,7 @@
 ## Notes-frFR: Gestion graphique des shards, interface Démoniste, ban , asservir
 ## Notes-ruRU: Менеджер заклинаний, камней и демонов для чернокнижника.
 ## Version: 8.8.5
-## Website: https://github.com/CKNOEP/Necrosis
+## Website: https://github.com/marenduskheart/necrosis-forever
 ## DefaultState: Enabled
 ## X-Original-Author: Lomig,lädygaga - sulfuron EUR - As lancestre
 ## X-Localizations: enUS, enGB, deDE, frFR, koKR, zhCN, zhTW, esES, ruRU
@@ -55,10 +49,10 @@ Locales\Localization.RU.lua
 Locales\Localization.TW.lua
 Locales\Localization.MX.lua
 
-Initialize_retail.lua
+Initialize.lua
 Utils.lua
 
-Dialog_retail.lua
+Dialog.lua
 AFKS.lua
 SummonQueue.lua
 VersionCheck.lua
@@ -71,31 +65,31 @@ Speech\Speech-cn.lua
 Speech\Speech-ru.lua
 
 Message.lua
-Spells-Forever.lua
-Dialog_Forever.lua
+Spells.lua
+DemonList.lua
 
-Timers\Functions_retail.lua
+Timers\Functions.lua
 Timers\GraphicalTimers.lua
 Timers\OtherTimers.lua
 
-XML\Attributes-Forever.lua
+XML\Attributes.lua
 
 XML\Options-Messages.lua
 XML\Options-SummonQueue.lua
-XML\Options-Sphere-Forever.lua
-XML\Options-Buttons-Forever.lua
-XML\Options-Menus_retail.lua
-XML\Options-Timers_retail.lua
-XML\Options-Misc-Forever.lua
+XML\Options-Sphere.lua
+XML\Options-Buttons.lua
+XML\Options-Menus.lua
+XML\Options-Timers.lua
+XML\Options-Misc.lua
 XML\Options-Overlay.lua
 
-XML\Panel-Forever.lua
+XML\Panel.lua
 XML\AboutPanel.lua
-Necrosis-Forever.lua
-XML\XML_retail.lua
+Necrosis.lua
+XML\XML.lua
 ThreatMeter.lua
 
 SpellActivations\SpellActivations.xml
 
-UI\BottomBanner\Framework_retail.lua
+UI\BottomBanner\EditModeLayout.lua
 UI\BottomBanner\Init.xml

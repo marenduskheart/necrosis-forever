@@ -231,7 +231,7 @@ function Necrosis:SetMiscConfig()
 
 	NecrosisAFK:SetChecked(NecrosisConfig.AFK)
 
-	-- Alert checkboxes (a nil value means "on", see the login defaults in Necrosis-Forever.lua)
+	-- Alert checkboxes (a nil value means "on", see the login defaults in Necrosis.lua)
 	if NecrosisProcAlertCheckButton then NecrosisProcAlertCheckButton:SetChecked(NecrosisConfig.ShadowTranceAlert ~= false) end
 	if NecrosisCreatureAlertCheckButton then NecrosisCreatureAlertCheckButton:SetChecked(NecrosisConfig.CreatureAlert ~= false) end
 

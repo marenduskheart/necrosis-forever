@@ -233,7 +233,7 @@ Local.DefaultConfig = {
 	},
 }
 
--- Default config is now loaded from Defaults_retail.lua which loads before Initialize_retail.lua
+-- Default config is now loaded from Defaults_retail.lua which loads before Initialize.lua
 
 -- Casted spell variables (name, rank, target, target level) || Variables des sorts castés (nom, rang, cible, niveau de la cible)
 Local.SpellCasted = {}
@@ -1363,7 +1363,7 @@ function Necrosis:OnEvent(event,...)
 			NecrosisConfig.StonePosition = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 			NecrosisConfig.StonePositionVersion = 2
 		end
-		-- The defaults table actually used (Initialize_retail.lua) has no ShadowTranceAlert / CreatureAlert, so both stayed
+		-- The defaults table actually used (Initialize.lua) has no ShadowTranceAlert / CreatureAlert, so both stayed
 		-- nil and the Shadow Trance / Backlash proc and the Enslave/Banish alerts never showed (issue #46).
 		-- Fill them in once, keeping any saved value || Comble les clés absentes sans écraser une valeur enregistrée.
 		if NecrosisConfig then
@@ -1379,7 +1379,7 @@ function Necrosis:OnEvent(event,...)
 		end
 		Necrosis.SyncAlertMouse()
 		-- Issue #46: BAG_UPDATE was listed but never registered, so bag changes (new stone, shard count) were not seen.
-		-- Registered at PLAYER_LOGIN: the Events list of Initialize_retail.lua is never registered, and PLAYER_ENTERING_WORLD is not delivered.
+		-- Registered at PLAYER_LOGIN: the Events list of Initialize.lua is never registered, and PLAYER_ENTERING_WORLD is not delivered.
 		pcall(function()
 			local bagFrame = _G["NecrosisEventFrame"]
 			if bagFrame then
@@ -4038,7 +4038,7 @@ function Necrosis:GetHealthstoneItemCooldown()
 end
 
 -- CRITICAL: Mark addon as ready to process events
--- This is called from Initialize_retail.lua hook
+-- This is called from Initialize.lua hook
 function Necrosis:EnableEventProcessing()
 	Local.InWorld = true
 end
